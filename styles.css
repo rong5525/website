@@ -23,6 +23,7 @@ a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 header { margin-bottom: 76px; }
+section:not(:last-child) { margin-bottom: 76px; }
 
 h1 {
   margin: 0 0 22px;
@@ -49,6 +50,21 @@ h2 {
   font-size: 27px;
   font-weight: 500;
 }
+
+.section-intro { max-width: 700px; margin: 0 0 22px; }
+
+.entry {
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  gap: 20px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+
+.entry:last-child { border-bottom: 1px solid var(--line); }
+.entry p { margin: 0; }
+.entry-label { color: var(--muted); font-size: 14px; }
+.details { color: var(--muted); font-size: 15px; }
 
 .publication {
   display: grid;
@@ -78,5 +94,5 @@ h3 {
   body { padding: 48px 20px; }
   header { margin-bottom: 58px; }
   h1 { font-size: 38px; }
-  .publication { grid-template-columns: 1fr; gap: 4px; }
+  .entry, .publication { grid-template-columns: 1fr; gap: 4px; }
 }
